@@ -42,24 +42,34 @@ found 0 vulnerabilities
 COPY
 9.Create a file called sendgrid-api.js and copy the code from the SendGrid integration page found under the send your first email heading. Paste this code from the SendGrid integration page into the sendgrid-api.js file. Update the ‘to’ setting to the email address you want to receive the test email (for example, your email address), and the ‘from’ setting to the email address you just set and verified as the sender.
 
-const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-const msg = {
-  to: 'your@email.com', // Change to your recipient
-  from: 'your.verified@sender.com', // Change to your verified sender
-  subject: 'Look! I’m sending from SendGrid',
-  text: 'Here’s the text version',
-  html: 'And here’s the <strong>HTML</strong> version',
-sgMail
-  .send(msg)
-  .then(() => {
-    console.log('Email sent')
-  })
-  .catch((error) => {
-    console.error(error)
-  })
-
+const sgMail = require('@sendgrid/mail')<Br/>
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)<Br/>
+const msg = {<Br/>
+  to: 'your@email.com', // Change to your recipient<Br/>
+  from: 'your.verified@sender.com', // Change to your verified sender<Br/>
+  subject: 'Look! I’m sending from SendGrid',<Br/>
+  text: 'Here’s the text version',<Br/>
+  html: 'And here’s the <strong>HTML</strong> version',<Br/>
+sgMail<Br/>
+  .send(msg)<Br/>
+  .then(() => {<Br/>
+    console.log('Email sent')<Br/>
+  })<Br/>
+  .catch((error) => {<Br/>
+    console.error(error)<Br/>
+  })<Br/>
+<Br/>
 COPY
 10.Check the "I've integrated the code above" checkbox, and click Next: Verify Integration.
 
 11.In terminal, run your app.
+
+
+<h2>Bonus: Add rich text editing to your email project</h2>
+Now that you’re ready to start sending emails, have you considered how you can help your users to create those emails?
+
+TinyMCE lets users create clean and compliant emails, in an easy-to-use WYSIWYG editor.
+
+Best of all, it integrates seamlessly with 12+ frameworks, including Node.js + Express, React, Angular and Vue.
+
+Check out our email editor starter config and demo or sign up for your FREE 14-day trial to test out TinyMCE’s premium features.
